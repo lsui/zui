@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZUI，一个简单吸引人的前端框架。">
+  <meta name="author" content="Zentao">
+
+  <title>ZUI - 开源HTML5跨屏框架</title>
+
+  <link href="../css/zui.min.css" rel="stylesheet">
+  <link href="../css/example.css" rel="stylesheet">
+
+  <!--[if lt IE 9]>
+  <script src="../../assets/html5shiv.js"></script>
+  <script src="../../assets/respond.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <article>
+    <h1>calendar</h1>
+    <div class="segment">
+      <div id="calendar" class="calendar"></div>
+    </div>
+  </article>
+
+<script src="../../assets/jquery.js"></script>
+<script src="../../dist/js/zui.js"></script>
+<script src="../../dist/lib/calendar/zui.calendar.js"></script>
+<script src="../js/example.js"></script>
+
+<script>
+$(function()
+{
+  $('#calendar').calendar();
+  var calendar = $('#calendar').calendar().data('zui.calendar');
+  var newEvent = {title:"吃饭了", desc: "描述", start: '2014-8-14 12:00', end: "2014-8=14 13:00"};
+  calendar.addEvents(newEvent);
+  //
+    // $('#calendar').calendar({data: {events: [{title:"吃饭了", desc: "描述", start: '2014-8-14 12:00', end: "2014-8=14 13:00"}]}});
+});
+</script>
+<script src="http://s95.cnzz.com/stat.php?id=1253026255&web_id=1253026255"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53781622-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</body>
+</html>
